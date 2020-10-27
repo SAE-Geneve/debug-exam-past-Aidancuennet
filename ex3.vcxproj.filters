@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\coyli\debug-exam-past-Aidancuennet\Ex3\Characters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\coyli\debug-exam-past-Aidancuennet\Ex3\Ex3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\coyli\debug-exam-past-Aidancuennet\Ex3\Characters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\coyli\debug-exam-past-Aidancuennet\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6A202FE2-FBA4-3A27-B72A-64965F36F697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F3C32C6D-E658-3FD2-A453-89F833F0F5E0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
