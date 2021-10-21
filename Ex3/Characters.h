@@ -8,12 +8,11 @@
 
 #ifndef Characters_hpp
 #define Characters_hpp
-
-#include <iostraem>
-
+#include "Characters.h"
 class Character;
+class Hero;
 
-class Monster : public Character
+class Monster
 {
     
 public:
@@ -23,31 +22,34 @@ public:
     void death();
 };
 
-class Hero : Character
+class Hero
 {
 public:
     Hero(int,int,int,int);
+    Hero(int i, int i1, int i2, int i3, float x);
     void takeDamage(int damage);
     void fight(Monster*);
     void death();
-};)
+    bool isAlive();
+};
 
 class Character
 {
 public:
     Character(int,int,int,int);
     void takeDamage(int damage);
-    bool isAlive() = 0;
+    int getAttack() const;
+    virtual bool isAlive() = 0;
     virtual void death() = 0;
-    
-    int getHealth();
-    int getDefense();
+    int getDefense() const;
+    int getHealth() const;
 protected:
-    int haelth;
+    int health;
     int attack;
     int defense;
+    int strength;
 };
 
 
 
-#endif /* Characters_hpp */
+#endif  //Characters_hpp 

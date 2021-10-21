@@ -6,16 +6,18 @@
 //
 
 #include <iostream>
-#include <lisp>
-#include <Character.h"
+#include <list>
+#include <vector>
 
-int main(
-)
+
+#include "Characters.h"
+
+int main()
 {
-    Hero hero = new Hero(10,            10,10,      10, 0.5f);
+    Hero hero = new Hero(10,10,10,10, 0.5f);
     std::list<Monster> monsters = {
-        Monster(10, 1,      1,5),
-Monster(20,         5, 5,           5),
+        Monster(10, 1, 1,5),
+Monster(20, 5, 5, 5),
                 Monster(30,     10,10,5)
     };
     

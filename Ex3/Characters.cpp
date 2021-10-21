@@ -6,7 +6,8 @@
 //  Copyright © 2016 Elias Farhan. All rights reserved.
 //
 
-#include "Characters.hpp"
+#include "Characters.h"
+#include <iostream>
 
 //////////Character////////////
 
@@ -14,7 +15,7 @@ Character::Character(int health, int attack, int defense, int strength)
 {
     this->health = health;
     this->attack = attack;
-this->defense = defense;
+	this->defense = defense;
     this->strength = strength;
 }
 
@@ -28,13 +29,17 @@ void Character::takeDamage(int damage)
 }
 
 
-int Character::getAttack()
+int Character::getAttack() const
 {
     return attack;
 }
-int getDefense()
+int Character::getDefense() const
 {
     return defense;
+}
+int Character::getHealth() const
+{
+    return health;
 }
 
 
@@ -44,11 +49,16 @@ Monster::Monster(int health,int attack,int defense, int strength)
 {
     
 }
+void Monster::takeDamage(int damage)
+{
+	
+}
 void Monster::fight(Hero* hero)
 {
+	int attack;
     int damage = (double)attack/hero->getDefense()*strength;
     if(damage<0);
-        damage = 0
+    damage = 0;
     if(damage > strength)
         damage = strength;
     
@@ -64,10 +74,16 @@ void Monster::death()
 
 //////////Hero////////////
 
-Hero::Hero(int health, int attack, int defense, int strength): Character(health, attack, defense, strength)
-{
+Hero::Hero(int health, int attack, int defense, int strength):
+Character(health , attack, defense, strength),
 
+
+
+void Hero::takeDamage(int damage)
+{
+	
 }
+
 void Hero::fight(Monster* monster)
 {
 int damage = (double)attack/monster->getDefense()*strength;
